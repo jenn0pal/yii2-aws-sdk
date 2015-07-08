@@ -1,2 +1,2 @@
 # yii2-aws-sdk
-Yii2 wrapper for AWS Sdk V3
+Yii2 AWS Sdk V3 wrapper
