@@ -37,17 +37,16 @@ in your web.php, your configuration would look like this
 ```
 See additional aws configuration [here](http://docs.aws.amazon.com/aws-sdk-php/v3/guide/guide/configuration.html)
 
-
 Usage
 -----
 
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-/* @var $sdk \jenn0pal\aws\AwsSdk */
-$dynamoDbClient = $sdk->createDynamoDb();
+/* @var $aws \jenn0pal\aws\AwsSdk */
+$dynamoDbClient = $aws->createDynamoDb();
 ...
-$s3Client = $sdk->createS3();
+$s3Client = $aws->createS3();
 $result = $s3Client->listObjects(['Bucket' => 'my-bucket'])->toArray();
 //get the last object
 $object = end($result['Contents']);
