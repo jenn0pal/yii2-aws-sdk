@@ -2,7 +2,7 @@
 	"name": "jenn0pal/yii2-aws-sdk",
 	"description": "Yii2 AWS Sdk v3 wrapper.",
 	"type": "library",
-	"keywords": ["yii2", "aws", "sdk", "wrapper"]
+	"keywords": ["yii2", "aws", "sdk", "wrapper"],
 	"require": {
 		"aws/aws-sdk-php": "^3.0"
 	},
