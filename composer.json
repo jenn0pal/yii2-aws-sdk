@@ -14,5 +14,9 @@
 			"role": "Developer"
 		}
 	],
-	"minimum-stability": "stable"
+	"autoload": {
+	    "psr-4": {
+			"jenn0pal\\aws\\": ""
+	    }
+	}	
 }
