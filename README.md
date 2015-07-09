@@ -27,9 +27,14 @@ in your web.php, your configuration would look like this
 'components' => [
 	'aws' => [
 		'class' => 'jenn0pal\aws\BaseAws',
+		//required config
 		'key' => 'your_key',
 		'secret' => 'your_secret',
 		'region' => 'your_region',
+		//additional config
+		'options' => [
+			'scheme' => 'http'
+		],
 		// optional config file
 		//'configFile' => require_once('/path/to/aws.config.php'),
 	]
