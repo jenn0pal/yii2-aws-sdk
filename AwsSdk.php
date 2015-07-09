@@ -35,13 +35,18 @@ class AwsSdk extends Component
     {
         if ($this->configFile == false) {
             $this->_config = [
-                'credentials' => [
-                    'key' => $this->key,
-                    'secret' => $this->secret,
-                ],
                 'region' => $this->region,
                 'version' => $this->version,
             ];
+
+            //if credentials is set on app config.
+            if (!$this->key == null && !$this->secret == null) {
+                $this->_config = array_merge($this->_config, ['credentials' => [
+                    'key' => $this->key,
+                    'secret' => $this->secret,
+                ]]);
+            }
+
             $this->_config = array_merge($this->_config, $this->options);
 
         } else {

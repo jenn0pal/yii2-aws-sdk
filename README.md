@@ -28,12 +28,14 @@ in your web.php, your configuration would look like this
 	'aws' => [
 		'class' => 'jenn0pal\aws\BaseAws',
 		//required config
+		'region' => 'your_region',
+		//optional config
 		'key' => 'your_key',
 		'secret' => 'your_secret',
-		'region' => 'your_region',
+		'version' => 'latest',
 		//additional config
 		'options' => [
-			'scheme' => 'http'
+			'scheme' => 'http',
 		],
 		// optional config file
 		//'configFile' => require_once('/path/to/aws.config.php'),
@@ -41,6 +43,8 @@ in your web.php, your configuration would look like this
 ]
 ```
 See additional aws configuration [here](http://docs.aws.amazon.com/aws-sdk-php/v3/guide/guide/configuration.html)
+
+Warning! It is not recommended to hard code your credentials on your app config because you may accidentally commit it in your VCS, potentially exposing it to more people than intended. See additional ways [here](http://docs.aws.amazon.com/aws-sdk-php/v3/guide/guide/credentials.html)
 
 Usage
 -----
