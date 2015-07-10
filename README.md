@@ -53,6 +53,7 @@ Once the extension is installed, simply use it in your code by  :
 
 ```php
 /* @var $aws \jenn0pal\aws\AwsSdk */
+$aws = \Yii::$app->aws;
 $dynamoDbClient = $aws->createDynamoDb();
 ...
 $s3Client = $aws->createS3();
